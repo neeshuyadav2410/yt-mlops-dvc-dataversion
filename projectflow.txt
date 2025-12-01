@@ -13,3 +13,6 @@ now - "dvc commit" and then "dvc push"  -- we need to do this because now dvc is
 do a git add- commit - push to mark this as first version of data -- because change has occured in s3 and we need to push it - usually git dont' track s3 but now it is local, so it is tracking
 Now make changes to mycode.py to append a new row in data, check changes via "dvc status"
 again -- dvc commit and then dvc push
+then git commit push (wr're saving v2 of our data at this point)
+check dvc/git status, everything should be upto date
+now repeat step 10-12 for v3 of data
