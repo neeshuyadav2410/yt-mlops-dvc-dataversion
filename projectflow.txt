@@ -8,4 +8,6 @@ no we do "dvc remote add -d myremote S3",, # basically telling dvc where is stor
 next "dvc add data/" -- we are saying to dvc that you are now responsible to tell us about any change in data under you ,
  if we directely give this commnad it will give erro, it will say you folder is already tracked by git,
   first remove it by using git rm -r --chached 'data' and git commit -r "stop tracking dta"
-again we do "dvc add data/" (creates data.dvc) then "git add .gitignore data.dvc"  
+again we do "dvc add data/" (creates data.dvc) then "git add .gitignore data.dvc"
+now - "dvc commit" and then "dvc push"  -- we need to do this because now dvc is tracking our data but has not saved its version in s3 --- it will save 2 files, one is csv and one will hold its ID
+do a git add- commit - push to mark this as first version of data -- because change has occured in s3 and we need to push it - usually git dont' track s3 but now it is local, so it is tracking
