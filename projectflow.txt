@@ -1,0 +1,3 @@
+create a git repo and clone it in local
+create mycopd.py and add code to it. (it will save a csv file to a new "data" folder)
+do a git add commit push before initializing dvc.
