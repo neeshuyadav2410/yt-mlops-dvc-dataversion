@@ -1,3 +1,11 @@
 create a git repo and clone it in local
 create mycopd.py and add code to it. (it will save a csv file to a new "data" folder)
-do a git add commit push before initializing dvc.
+do a git add commit push before initializing dvc. 
+after this # do pip install dvc
+now we do "dvc init" (creates .dvcignore , .dvc)
+now do "mkdir S3" (creates a new s3 directory) # wse to s3 wgera use honge, lekin filhaal abhi kaam chalane ke liye local me hi ek directory banyenge
+no we do "dvc remote add -d myremote S3",, # basically telling dvc where is storage , at place of s3 it can be url of your s3 bucket
+next "dvc add data/" -- we are saying to dvc that you are now responsible to tell us about any change in data under you ,
+ if we directely give this commnad it will give erro, it will say you folder is already tracked by git,
+  first remove it by using git rm -r --chached 'data' and git commit -r "stop tracking dta"
+again we do "dvc add data/" (creates data.dvc) then "git add .gitignore data.dvc"  
